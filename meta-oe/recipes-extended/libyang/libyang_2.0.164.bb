@@ -11,7 +11,6 @@ SRCREV = "a0cc89516ab5eca84d01c85309f320a94752a64c"
 SRC_URI = "git://github.com/CESNET/libyang.git;branch=master;protocol=https \
            file://libyang-add-stdint-h.patch \
            file://run-ptest \
-           file://CVE-2023-26916.patch \
            "
 
 S = "${WORKDIR}/git"
