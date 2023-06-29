@@ -7,6 +7,8 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=fb997454c8d62aa6a47f07a8cd48b006"
 
 SRC_URI = "git://github.com/c-ares/c-ares.git;branch=main;protocol=https \
            file://CVE-2022-4904.patch \
+           file://CVE-2023-31130.patch \
+           file://CVE-2023-32067.patch \
           "
 SRCREV = "2aa086f822aad5017a6f2061ef656f237a62d0ed"
 
@@ -21,3 +23,7 @@ PACKAGES =+ "${PN}-utils"
 FILES:${PN}-utils = "${bindir}"
 
 BBCLASSEXTEND = "native nativesdk"
+
+# this vulneribility applies only when cross-compiling using autotools
+# yocto cross-compiles via cmake which is also listed as official workaround
+CVE_CHECK_IGNORE += "CVE-2023-31124"

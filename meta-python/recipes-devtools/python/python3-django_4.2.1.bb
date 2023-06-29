@@ -1,13 +1,13 @@
 require python-django.inc
 inherit setuptools3
 
-SRC_URI[sha256sum] = "9772e6935703e59e993960832d66a614cf0233a1c5123bc6224ecc6ad69e41e2"
+SRC_URI[sha256sum] = "7efa6b1f781a6119a10ac94b4794ded90db8accbe7802281cd26f8664ffed59c"
 
 RDEPENDS:${PN} += "\
     ${PYTHON_PN}-sqlparse \
 "
 
 # Set DEFAULT_PREFERENCE so that the LTS version of django is built by
-# default. To build the 3.x branch, 
-# PREFERRED_VERSION_python3-django = "3.2.2" can be added to local.conf
+# default. To build the 4.x branch, 
+# PREFERRED_VERSION_python3-django = "4.0.2" can be added to local.conf
 DEFAULT_PREFERENCE = "-1"
