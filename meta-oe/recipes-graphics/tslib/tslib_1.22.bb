@@ -81,5 +81,3 @@ FILES:tslib-uinput += "${bindir}/ts_uinput"
 
 FILES:tslib-tests = "${bindir}/ts_harvest ${bindir}/ts_print ${bindir}/ts_print_raw ${bindir}/ts_print_mt \
                      ${bindir}/ts_test ${bindir}/ts_test_mt ${bindir}/ts_verify ${bindir}/ts_finddev ${bindir}/ts_conf"
-
-BBCLASSEXTEND = "native nativesdk"
