@@ -26,8 +26,7 @@ SRC_URI = " \
     file://run-ptest \
 "
 
-SRC_URI[md5sum] = "929a255c71a9933608bd7c31927760f7"
-SRC_URI[sha256sum] = "79b36985fb2703146618d87c4acde3e068b91c553fb93f021a337f175fd10ebe"
+SRC_URI[sha256sum] = "0232231bb2f29d6bf2426e70a08a7e0c63a0d59a9b44863b7f5e2357a6e49fea"
 
 UPSTREAM_CHECK_REGEX = "tcpdump-(?P<pver>\d+(\.\d+)+)\.tar"
 
