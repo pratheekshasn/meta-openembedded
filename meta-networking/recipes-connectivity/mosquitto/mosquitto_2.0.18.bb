@@ -17,13 +17,15 @@ DEPENDS = "uthash cjson"
 SRC_URI = "http://mosquitto.org/files/source/mosquitto-${PV}.tar.gz \
            file://mosquitto.init \
            file://1571.patch \
+           file://2894.patch \
+           file://2895.patch \
 "
 
-SRC_URI[sha256sum] = "d0dde8fdb12caf6e2426b4f28081919a2fce3448773bdb8af0d3cd5fe5776925"
+SRC_URI[sha256sum] = "d665fe7d0032881b1371a47f34169ee4edab67903b2cd2b4c083822823f4448a"
 
 inherit systemd update-rc.d useradd cmake pkgconfig
 
-PACKAGECONFIG ??= "ssl dlt websockets \
+PACKAGECONFIG ??= "ssl websockets \
                   ${@bb.utils.filter('DISTRO_FEATURES','systemd', d)} \
                   "
 
